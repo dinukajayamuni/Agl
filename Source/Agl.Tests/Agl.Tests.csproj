@@ -90,6 +90,7 @@
   <ItemGroup>
     <Compile Include="FakeHandler.cs" />
     <Compile Include="FakeHttpClientFactory.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="IHttp.cs" />
     <Compile Include="PersonServiceTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

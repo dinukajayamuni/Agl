@@ -36,7 +36,6 @@ namespace Agl.Tests
 
         private void AnUnsuccessfulResponseIsReceivedFromThePeopleStore()
         {
-            var json = File.ReadAllText("Data/valid-response.json");
             SetupHttpResponseMessage("[]", HttpStatusCode.BadRequest);
         }
 

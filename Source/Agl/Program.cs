@@ -11,10 +11,10 @@ namespace Agl
             var peopleStoreUrl = ConfigurationManager.AppSettings["PeopleUrl"];
             var personService = new PersonService(new HttpClientFactory(), peopleStoreUrl);
             var catsByOwnerGender = personService.GetCatsByOwnerGender().GetAwaiter().GetResult();
-            foreach (var genderGroup in catsByOwnerGender)
+            foreach (var ownerGenderGroup in catsByOwnerGender)
             {
-                Console.WriteLine(genderGroup.Gender);
-                foreach (var pet in genderGroup.Pets)
+                Console.WriteLine(ownerGenderGroup.Gender);
+                foreach (var pet in ownerGenderGroup.Pets)
                     Console.WriteLine($"  - {pet.Name}");
             }
         }
